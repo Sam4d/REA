@@ -22,6 +22,7 @@ import {
   canonicalSkillNeedsInstall,
   existingSkillDestinations,
   installCanonicalSkill,
+  MANAGED_SKILL_FILES,
   readInstalledSkillIdentity,
   skillDestinations,
   type SkillInstallFileOperations,
@@ -578,6 +579,7 @@ describe("canonical skill transaction", () => {
       "android-applications.md",
       "runtime-observation.md",
       "evidence-workflows.md",
+      "recreation-workflow.md",
     ]) {
       const installed = await readFile(
         join(dirname(destination), "references", reference),
@@ -626,15 +628,7 @@ describe("canonical skill transaction", () => {
       ok: true,
       value: "installed",
     });
-    const paths = [
-      "SKILL.md",
-      "references/android-applications.md",
-      "references/connection-and-recovery.md",
-      "references/evidence-workflows.md",
-      "references/javascript-applications.md",
-      "references/native-and-artifacts.md",
-      "references/runtime-observation.md",
-    ];
+    const paths = [...MANAGED_SKILL_FILES].sort();
     const records = await Promise.all(
       paths.map(async (path) => {
         const bytes = await readFile(

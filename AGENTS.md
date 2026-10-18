@@ -1,5 +1,16 @@
 # Repository Guidelines
 
+## Whole-product recreation requests
+
+When the user says `recreate X`, or requests a detailed app/game reconstruction,
+read [RECREATE.md](RECREATE.md) and the complete
+[recreation workflow](.agents/skills/reverse-engineer-anything/references/recreation-workflow.md).
+Carry the task through target identification, full accessible-product research,
+architecture selection, implementation, reference comparisons, and a resumable
+handoff. Use the recreation workbench to retain evidence and coverage. Preserve
+unknowns and measured differences; never claim exact fidelity from a superficial
+demo. Instructions guide an agent; they do not change its model or grant tools.
+
 ## Product and Authority
 
 REA is a local-only reverse-engineering tool with shared CLI/MCP workflows. Distinguish observations, derivations, inferences, and unknowns; preserve Evidence provenance and session semantics through both adapters. Provider support and setup live in [README.md](README.md#choosing-a-deep-analysis-provider) and its linked guides.

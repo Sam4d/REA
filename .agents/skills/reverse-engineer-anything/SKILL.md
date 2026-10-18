@@ -1,11 +1,20 @@
 ---
 name: reverse-engineer-anything
-description: Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA. Use shipped-artifact or requested runtime evidence to explain features, compare versions, decompile code, or guide a reconstruction. Skip REA for ordinary source-repository architecture analysis.
+description: Reverse engineer native, managed, Electron/JavaScript, packaged, firmware, and browser targets with REA. For "recreate X" requests, research the complete accessible app or game, implement it, and validate behavior, visuals, motion, and performance against reference evidence. Skip REA tools for ordinary source-repository architecture analysis.
 metadata:
-  version: "42"
+  version: "43"
 ---
 
 # REA
+
+For `recreate X` or whole-app/game reconstruction requests, read
+[the recreation workflow](references/recreation-workflow.md) first and carry
+research through implementation and measured reference comparisons. The source
+checkout's `RECREATE.md` documents the persistent workbench. The workflow ships
+with this skill; the checkout workbench is optional when the skill is installed
+alone. Source-only reconstruction uses ordinary repository tools without
+unnecessary REA provider setup. Keep the user's entire requested scope in the
+coverage ledger and report missing access or assets explicitly.
 
 Use REA when a claim depends on a shipped binary or package, decompilation,
 passive application runtime evidence, or comparison with
